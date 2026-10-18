@@ -29,4 +29,22 @@ body{background:radial-gradient(ellipse at 0% 0%,#ffe0be 0,transparent 43%),radi
 .legend>span{background:#fff4e9;color:#916c54}.legend>span:nth-child(1) .dot{background:#eea04b!important}.legend>span:nth-child(2) .dot{background:#af8bc6!important}.legend>span:nth-child(3) .dot{background:#a8bb65!important}
 #selection{background:#fff2e4;color:#9d643e;border-color:#f8e2cc}#goToday,#save{background:#e97131;box-shadow:0 4px 0 #ffddc2}#goToday:hover,#save:hover{background:#cd5920}
 aside>.card:first-child{background:linear-gradient(145deg,#fff0df,#fffaf5);border-color:#ffe0c1}.row{border-color:#f2dfcc}.icon{color:#cc7539;background:#fff9ed}.row small{color:#a38773}aside>.lookup{background:linear-gradient(145deg,#fff3cb,#fffaf0);border-color:#f6e5b6}.lookup>h2{color:#865c24}.lookup label{color:#a28652}input{border-color:#ecdcc5}#result{color:#9b641e}summary{color:#a16944}#reset{background:#fae9da;color:#9e6a49}footer{color:#b19684}
+
+/* Shift palette v4: white rest days, sunrise orange and midnight indigo */
+.day.dia{background:linear-gradient(145deg,#fff0c9,#ffd49b);color:#86430d;border-color:#f5c37e;box-shadow:inset 0 1px 0 #fff9,0 3px 7px #cf862512}
+.day.dia span{color:#985719}
+.day.dia:hover{background:linear-gradient(145deg,#ffe9ae,#ffc87d);box-shadow:0 6px 14px #d58a3528}
+.day.noche{background:linear-gradient(145deg,#354b83,#202f58);color:#fff;border-color:#40568d;box-shadow:inset 0 1px 0 #ffffff20,0 3px 9px #26376320}
+.day.noche span{color:#d7e2ff}
+.day.noche:hover{background:linear-gradient(145deg,#415b97,#2b3c69);box-shadow:0 6px 14px #26376330}
+.day.libre{background:#fff;color:#8a8079;border-color:#eee6df;box-shadow:none}
+.day.libre span{color:#9a8e85;font-weight:500}
+.day.libre:hover{background:#fff;border-color:#d9c6b7;box-shadow:0 5px 12px #855a2510}
+.day.today{border-color:#e87532;box-shadow:0 0 0 3px #ed8a361c}
+.day.today:after{background:#e87532}
+.day.noche.today:after{background:#ffcf8f}
+.day.selected{box-shadow:0 0 0 2px #fff,0 0 0 4px #e7a16c}
+.legend>span:nth-child(1) .dot{background:#f1b85f!important}
+.legend>span:nth-child(2) .dot{background:#2e4275!important}
+.legend>span:nth-child(3) .dot{background:#fff!important;border:1px solid #cfc2b8}
 </style><main><header><div class="brand">Calendario de turnos</div><div class="tag">Día · Noche · Libre · Libre</div></header><section class="hero"><div><div class="tag" id="todayDate"></div><h1 id="todayTitle"></h1><p id="tomorrow"></p></div><div class="symbol" id="todayIcon"></div></section><div class="layout"><section class="card"><div class="nav"><button id="prev" aria-label="Mes anterior">←</button><h2 id="month"></h2><button id="next" aria-label="Mes siguiente">→</button></div><div class="grid" id="calendar"></div><div class="legend"><span><i class="dot" style="background:#e9b34c"></i>Día</span><span><i class="dot" style="background:#8f91d2"></i>Noche</span><span><i class="dot" style="background:#73ac81"></i>Libre</span></div><p class="note" id="selection" aria-live="polite">Selecciona un día para ver su turno.</p><button id="goToday">Volver a hoy</button></section><aside><section class="card"><h2>Próximos días</h2><div id="upcoming"></div></section><section class="card lookup"><h2>Consulta una fecha</h2><label for="lookup">¿Qué turno tiene ese día?</label><input type="date" id="lookup"><p id="result" aria-live="polite"></p></section></aside></div><section class="card lookup"><details><summary>Ajustar el inicio del ciclo</summary><p class="note">El ciclo se repite cada cuatro días. Elige una fecha en la que haya tenido turno de día. Este ajuste se guarda en este navegador.</p><label for="anchor">Fecha con turno de día</label><input type="date" id="anchor"><button id="save">Guardar ajuste</button><button id="reset">Restablecer 5 de octubre</button><p id="saved" class="note" aria-live="polite"></p></details></section><footer>Calendario calculado desde el 5 de octubre de 2026 · Hora de Chile · Los turnos nocturnos se muestran en el día en que comienzan.</footer></main><script src="app.js"></script></html>
